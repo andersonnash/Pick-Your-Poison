@@ -1,1 +1,144 @@
 # Pick-your-poison
+
+# Project Overview
+
+## Project Name
+Pick Your Poison
+
+www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita
+
+
+## Project Description
+
+This app will append the cocktial name, recipe description, and ingredient list to the browser. The user will be able to type a cocktail name and the app will return multiple cockails with the keyword name.
+
+## API and Data Sample
+
+www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita
+
+Cocktail DB API
+
+"drinks": [
+        {
+            "idDrink": "11007",
+            "strDrink": "Margarita",
+            "strDrinkAlternate": null,
+            "strTags": "IBA,ContemporaryClassic",
+            "strVideo": null,
+            "strCategory": "Ordinary Drink",
+            "strIBA": "Contemporary Classics",
+            "strAlcoholic": "Alcoholic",
+            "strGlass": "Cocktail glass",
+            "strInstructions": "Rub the rim of the glass with the lime slice to make the salt stick to it. Take care to moisten only the outer rim and sprinkle the salt on it. The salt should present to the lips of the imbiber and never mix into the cocktail. Shake the other ingredients with ice, then carefully pour into the glass.",
+            "strInstructionsES": null,
+            "strInstructionsDE": "Reiben Sie den Rand des Glases mit der Limettenscheibe, damit das Salz daran haftet. Achten Sie darauf, dass nur der äußere Rand angefeuchtet wird und streuen Sie das Salz darauf. Das Salz sollte sich auf den Lippen des Genießers befinden und niemals in den Cocktail einmischen. Die anderen Zutaten mit Eis schütteln und vorsichtig in das Glas geben.",
+            "strInstructionsFR": null,
+            "strInstructionsIT": "Strofina il bordo del bicchiere con la fetta di lime per far aderire il sale.\r\nAvere cura di inumidire solo il bordo esterno e cospargere di sale.\r\nIl sale dovrebbe presentarsi alle labbra del bevitore e non mescolarsi mai al cocktail.\r\nShakerare gli altri ingredienti con ghiaccio, quindi versarli delicatamente nel bicchiere.",
+            "strInstructionsZH-HANS": null,
+            "strInstructionsZH-HANT": null,
+            "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/5noda61589575158.jpg",
+            "strIngredient1": "Tequila",
+            "strIngredient2": "Triple sec",
+            "strIngredient3": "Lime juice",
+            "strIngredient4": "Salt",
+            "strIngredient5": null,
+            "strIngredient6": null,
+            "strIngredient7": null,
+            "strIngredient8": null,
+            "strIngredient9": null,
+            "strIngredient10": null,
+            "strIngredient11": null,
+            "strIngredient12": null,
+            "strIngredient13": null,
+            "strIngredient14": null,
+            "strIngredient15": null,
+            "strMeasure1": "1 1/2 oz ",
+            "strMeasure2": "1/2 oz ",
+            "strMeasure3": "1 oz ",
+            "strMeasure4": null,
+            "strMeasure5": null,
+            "strMeasure6": null,
+            "strMeasure7": null,
+            "strMeasure8": null,
+            "strMeasure9": null,
+            "strMeasure10": null,
+            "strMeasure11": null,
+            "strMeasure12": null,
+            "strMeasure13": null,
+            "strMeasure14": null,
+            "strMeasure15": null,
+            "strImageSource": "https://commons.wikimedia.org/wiki/File:Klassiche_Margarita.jpg",
+            "strImageAttribution": "Cocktailmarler",
+            "strCreativeCommonsConfirmed": "Yes",
+            "dateModified": "2015-08-18 14:42:59"
+
+
+## Wireframes
+
+[Pick-Your-Poison---Wireframe-cc-Premium.pdf][https://github.com/andersonnash/Pick-your-poison/files/6688891/Pick-Your-Poison---Wireframe-cc-Premium.pdf]
+
+
+### MVP/PostMVP
+
+The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
+
+#### MVP 
+
+- Find and use external api 
+- Render image, recipe, and description on page 
+- Allow user to search for specific cocktail 
+
+#### PostMVP  
+
+- incorporate a different function of the same API into the website.
+- Add hover feature that will display a bartender mixing their cocktail
+- Add links to amazon to purchase bar supplies
+- Use local storage to save user favorites
+- add a 21 and up to enter prompt
+
+## Project Schedule
+
+|  Day | Deliverable | Status
+|---|---| ---|
+|June 21| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
+|June 22| Project Approval / Core Application Structure (HTML, CSS, etc.) | Incomplete
+|June 23| Pseudocode / actual code | Incomplete
+|June 24| Initial Clickable Model  | Incomplete
+|June 25| MVP | Incomplete
+|June 28| Presentations | Incomplete
+
+## Priority Matrix
+
+[https://user-images.githubusercontent.com/82549011/122825569-5acdc580-d29f-11eb-9120-05bb8f58e087.png]
+
+## Timeframes
+
+Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
+
+Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
+
+| Component | Priority | Estimated Time | Time Invested | Actual Time |
+| --- | :---: |  :---: | :---: | :---: |
+| Working with API | H | 6hrs|  |  |
+| Create Click Event to Render Data  | H | 3hrs |   |   |
+| Create Dynamic HTML | H | 3hrs|  |  |
+| Create CSS | H | 3hrs|  |  |
+| Appending Drink Data | H | 3hrs|  |  |
+| Appending Drink Image | H | 3hrs|  |  |
+| Flex Box Styling | H | 3hrs|  |  |
+| Remove Search When New Search is Initialized| H | 3hrs|  | |
+| Adding Links to Header| H | 3hrs|  | |
+| Total | H | 6hrs| 5hrs | 5hrs |
+
+## Code Snippet
+
+Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
+
+```
+function reverse(string) {
+	// here is the code to reverse a string of text
+}
+```
+
+## Change Log
+ Use this section to document what changes were made and the reasoning behind those changes.  
