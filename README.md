@@ -94,6 +94,7 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 - Add hover feature that will display a bartender mixing their cocktail
 - Add links to amazon to purchase bar supplies
 - Use local storage to save user favorites
+- Add an "add to favorites button" that fades the coctktail image when clicked
 - add a 21 and up to enter prompt
 
 ## Project Schedule
@@ -113,9 +114,6 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 ## Timeframes
 
-Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
-
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
@@ -128,7 +126,7 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Flex Box Styling | H | 3hrs|  |  |
 | Remove Search When New Search is Initialized| H | 3hrs|  | |
 | Adding Links to Header| H | 3hrs|  | |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Total | H | 30hrs|  |  |
 
 ## Code Snippet
 
