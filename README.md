@@ -74,7 +74,7 @@ Cocktail DB API
 
 ## Wireframes
 
-[Pick-Your-Poison---Wireframe-cc-Premium.pdf][https://github.com/andersonnash/Pick-your-poison/files/6688891/Pick-Your-Poison---Wireframe-cc-Premium.pdf]
+[Pick-Your-Poison][https://lucid.app/lucidchart/invitations/accept/inv_08549d47-19f1-4aab-838d-52bcee01d56d?viewport_loc=55%2C-63%2C1441%2C1059%2C0_0]
 
 
 ### MVP/PostMVP
