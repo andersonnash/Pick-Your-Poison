@@ -5,7 +5,6 @@
 ## Project Name
 Pick Your Poison
 
-www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita
 
 
 ## Project Description
