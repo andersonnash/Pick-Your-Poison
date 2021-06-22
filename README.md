@@ -16,7 +16,7 @@ This app will append the cocktial name, recipe description, and ingredient list 
 www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita
 
 Cocktail DB API
-
+```
 "drinks": [
         {
             "idDrink": "11007",
@@ -70,7 +70,7 @@ Cocktail DB API
             "strImageAttribution": "Cocktailmarler",
             "strCreativeCommonsConfirmed": "Yes",
             "dateModified": "2015-08-18 14:42:59"
-
+```
 
 ## Wireframes
 
@@ -86,6 +86,8 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 - Find and use external api 
 - Render image, recipe, and description on page 
 - Allow user to search for specific cocktail 
+- Flex Box Styling for Seaech Results
+- Media Query for Mobile
 
 #### PostMVP  
 
@@ -103,8 +105,8 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 |June 21| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
 |June 22| Project Approval / Core Application Structure (HTML, CSS, etc.) | Incomplete
 |June 23| Pseudocode / actual code | Incomplete
-|June 24| Initial Clickable Model  | Incomplete
-|June 25| MVP | Incomplete
+|June 24|MPV Initial Clickable Model  | Incomplete
+|June 25| Advanced Styling PVMP| Incomplete
 |June 28| Presentations | Incomplete
 
 ## Priority Matrix
@@ -121,10 +123,14 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 | Create Dynamic HTML | H | 3hrs|  |  |
 | Create CSS | H | 3hrs|  |  |
 | Appending Drink Data | H | 3hrs|  |  |
-| Appending Drink Image | H | 3hrs|  |  |
-| Flex Box Styling | H | 3hrs|  |  |
+| Appending Drink Image | H | 1hrs|  |  |
+| Formatting Images| H | 3hrs|  | |
+| Flex Box Styling | H | 2hrs|  |  |
+| Flex Box for search results| H | 2hrs|  | |
+| Advanced CSS| H | 3hrs|  | |
 | Remove Search When New Search is Initialized| H | 3hrs|  | |
-| Adding Links to Header| H | 3hrs|  | |
+| Media Query| H | 2hrs|  | |
+| Adding Links to Header PVMP| H | 3hrs|  | |
 | Total | H | 30hrs|  |  |
 
 ## Code Snippet
