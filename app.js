@@ -18,7 +18,7 @@ async function fetchData(name) {
   } catch (error) {
     console.error(error)
     let errorMsg = document.createElement('h1')
-    errorMsg.textContent = `You Must've Had One Too Many. Check Yer Spelling and Try Again!`
+    errorMsg.textContent = 'Why Are You Still Awake?'
     dataContainer.append(errorMsg)
   }   
 }
@@ -32,6 +32,7 @@ function showDrinkData(data) {
 
     const drinkDiv = document.createElement('div')
     // console.log(drinkDiv)
+    drinkDiv.classList.add('drinkDiv')
     section.append(drinkDiv)
 
     const drinkName = document.createElement('h3')
@@ -48,6 +49,7 @@ function showDrinkData(data) {
     drinksImg.setAttribute('src', data[i].strDrinkThumb)
     // < img; src = `${data.strDrinkThumb}`;style ="height: 250px; width: auto">
     console.log(data[i].strDrinkThumb)
+    drinksImg.classList.add('drinksImg')
     drinkDiv.append(drinksImg)
 
     const ing1 = document.createElement('p')
@@ -83,6 +85,7 @@ function showDrinkData(data) {
     const inst = document.createElement('h4')
     inst.textContent = `${data[i].strInstructions}`
     console.log(data[i].strInstructions)
+    // inst.classList.add('inst')
     drinkDiv.append(inst)
 
 
@@ -143,3 +146,4 @@ function removeDrink() {
     section.removeChild(section.lastChild)
   }
 }
+
