@@ -22,7 +22,42 @@ async function fetchData(name) {
     dataContainer.append(errorMsg)
   }   
 }
-// fetchData('mule')
+
+async function alcData(name) {
+  try {
+    const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${name}`
+    const response = await axios.get(url)
+    console.log(response)
+    console.log(response.data.drinks)
+    // const drinksArray = Object.values(response.data.drinks)
+    // console.log(drinksArray)
+    // showDrinkData(drinksArray)
+    // return response
+  } catch (error) {
+    console.error(error)
+  }   
+}
+alcData('gin')
+
+function showAlcData(data){
+  for (let i = 0; i < data.length; i++) {
+    const alcDiv = document.createElement('div')
+    section.append(alcDiv)
+
+    const alcName = createElement('h3')
+    alcName.textContent = `${data[i].strDrink}`
+    console.log(data[i].strDrink)
+    alcDiv.append(alcName)
+
+    const drinksImg = document.createElement('img')
+    drinksImg.setAttribute('src', data[i].strDrinkThumb)
+    console.log(data[i].strDrinkThumb)
+    drinksImg.classList.add('drinksImg')
+    drinkDiv.append(drinksImg)
+
+
+  }
+}
 
 // (! || '')
 
@@ -52,6 +87,26 @@ function showDrinkData(data) {
     drinksImg.classList.add('drinksImg')
     drinkDiv.append(drinksImg)
 
+    //Create empty array for measurments 
+    let measurments = []
+
+    //Create empty array for ingredients
+    let ingredients = []
+
+    //Push measurments into the measurments array with a for in loop - inside of loop use control flor - if statment make sure it has.includes() str
+    // for (measurments in array) {
+    //   if (measurments === strMeasure && measurments) includes; " " || '';
+    // }
+    //Push ingredients into the ingredients array with a for in loop
+
+    //For Loop (i < measurmenets.length) 
+    //create a p element within the for loop - textContent of ele use `${}`
+    //ingredients[i] 
+    //measurments[i]
+
+
+
+
     const ing1 = document.createElement('p')
     ing1.textContent = `${data[i].strIngredient1}:`
     console.log(data[i].strIngredient1)
@@ -72,15 +127,15 @@ function showDrinkData(data) {
     console.log(data[i].strIngredient4)
     drinkDiv.append(ing4)
 
-    const ing5 = document.createElement('p')
-    ing5.textContent = `${data[i].strIngredient5}:`
-    console.log(data[i].strIngredient5)
-    drinkDiv.append(ing5)
+    // const ing5 = document.createElement('p')
+    // ing5.textContent = `${data[i].strIngredient5}:`
+    // console.log(data[i].strIngredient5)
+    // drinkDiv.append(ing5)
 
-    const ing6 = document.createElement('p')
-    ing6.textContent = `${data[i].strIngredient6}:`
-    console.log(data[i].strIngredient6)
-    drinkDiv.append(ing6)
+    // const ing6 = document.createElement('p')
+    // ing6.textContent = `${data[i].strIngredient6}:`
+    // console.log(data[i].strIngredient6)
+    // drinkDiv.append(ing6)
 
     const inst = document.createElement('h4')
     inst.textContent = `${data[i].strInstructions}`
@@ -121,6 +176,7 @@ function showDrinkData(data) {
   }
 }
 
+
 // const form = document.querySelector("#drink-form")
 
 // form.addEventListener('click', (e) => {
@@ -137,9 +193,20 @@ button.addEventListener('click', () => {
   let data = document.querySelector('#blank').value
   console.log(data)
   fetchData(data)
+  // alcData(data)
   removeDrink()
   return data
 })
+
+// button.addEventListener('submit', () => {
+//   // const inputValue = document.querySelector('#blank').value
+//   let data = document.querySelector('#blank2').value
+//   console.log(data)
+//   // fetchData(data)
+//   alcData(data)
+//   // removeDrink()
+//   return data
+// })
 
 function removeDrink() {
   while (section.lastChild) {
