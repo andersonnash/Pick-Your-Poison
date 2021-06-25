@@ -2,6 +2,8 @@ const button = document.querySelector('button')
 const button2 = document.querySelector('button')
 const section = document.querySelector('.your-drink')
 const dataContainer = document.querySelector("#data-container")
+const mybutton = document.getElementById("myBtn")
+
 // console.log(dataContainer)
 
 
@@ -48,7 +50,7 @@ function showAlcData(data){
   for (let i = 0; i < data.length; i++) {
     console.log(data[i])
     const alcDiv = document.createElement('div')
-    alcDiv.classList.add("alvDiv")
+    alcDiv.classList.add("alcDiv")
     section.append(alcDiv)
 
     const alcName = document.createElement('h3')
@@ -79,6 +81,7 @@ function showDrinkData(data) {
     drinkDiv.append(drinkName)
 
     const drinksImg = document.createElement('img')
+    drinksImg.classList.add('drinksImg')
     drinksImg.setAttribute('src', data[i].strDrinkThumb)
     // < img; src = `${data.strDrinkThumb}`;style ="height: 250px; width: auto">
     // console.log(data[i].strDrinkThumb)
@@ -114,36 +117,80 @@ function showDrinkData(data) {
       ing.textContent = `${ingredients[i]}: ${measurments[i]}`
       drinkDiv.append(ing)
     }
-    console.log(ingredients)
-    console.log(measurments)
+    // console.log(ingredients)
+    // console.log(measurments)
   }
 
-  }
-  button.addEventListener('click', () => {
-    // const inputValue = document.querySelector('#blank').value
-    let data = document.querySelector('#blank').value
-    // console.log(data)
+}
+  
+
+//   button.addEventListener('click', () => {
+//     // const inputValue = document.querySelector('#blank').value
+//     let data = document.querySelector('#blank').value
+//     console.log(data)
     
-    fetchData(data)
-    // alcData(data)
-    removeDrink()
-    return data
-  })
+//     fetchData(data)
+//     // alcData(data)
+//     removeDrink()
+//     return data
+//   })
 
 
-button2.addEventListener('click', () => {
-    // e.preventDefault
-    // const inputValue = document.querySelector('#blank').value
-    const data = document.querySelector('#blank2').value
-    // console.log(data)
-    alcData(data)
-    removeDrink()
-    return data
-  })
+// button2.addEventListener('click', () => {
+//     // e.preventDefault()
+//     // const inputValue = document.querySelector('#blank').value
+//     let data = document.querySelector('#blank2').value
+//     console.log(data)
+//     alcData(data)
+//     removeDrink()
+//     return data
+//   })
 
-  function removeDrink() {
-    while (section.lastChild) {
-      section.removeChild(section.lastChild)
-    }
+
+
+const form = document.querySelector('.drink-data')
+form.addEventListener("submit", (e) => {
+  e.preventDefault()
+  const data = document.querySelector('#blank').value
+  // const data2 = document.querySelector('#blank2').value
+
+  document.querySelector('#blank').value = ""
+  fetchData(data)
+
+  // document.querySelector('#blank2').value = ""
+  // alcData(data2)
+
+  removeDrink()
+})
+  
+const alc = document.querySelector('.alc-data')
+alc.addEventListener("submit", (e) => {
+  e.preventDefault()
+  const data2 = document.querySelector("#blank2").value
+  document.querySelector("#blank2").value = ""
+  alcData(data2)
+
+  removeDrink()
+})
+
+function removeDrink() {
+  while (section.lastChild) {
+    section.removeChild(section.lastChild)
   }
+}
 
+
+window.onscroll = function () { scrollFunction() }
+function scrollFunction() {
+  if (document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+    }
+}
+
+function topFunction(){
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
