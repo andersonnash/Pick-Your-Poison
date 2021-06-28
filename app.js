@@ -4,12 +4,10 @@ const section = document.querySelector('.your-drink')
 const dataContainer = document.querySelector("#data-container")
 const mybutton = document.getElementById("myBtn")
 
-// console.log(dataContainer)
 
-
+// Get data from cocktail named
 async function fetchData(name) {
   try {
-    // const url = 'https://www.thecocktaildb.com/api/json/v1/1/random.php'
     const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${name}`
     const response = await axios.get(url)
     // console.log(response)
@@ -28,16 +26,12 @@ async function fetchData(name) {
 // fetchData('gin')
 
 
-
+// Get data from alcohol 
 async function alcData(name) {
   try {
     const url = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${name}`
-    // console.log(url)
     const response = await axios.get(url)
-    // console.log(response)
-    // console.log(response.data.drinks)
     const alcsArray = Object.values(response.data.drinks)
-    // console.log(alcsArray)
     showAlcData(alcsArray)
     return response
   } catch (error) {
@@ -45,6 +39,7 @@ async function alcData(name) {
   }   
 }
 // alcData('vodka')
+
 
 function showAlcData(data){
   for (let i = 0; i < data.length; i++) {
@@ -68,38 +63,30 @@ function showAlcData(data){
 
 function showDrinkData(data) {
   for (let i = 0; i < data.length; i++) {
-    // console.log(data[i])
 
     const drinkDiv = document.createElement('div')
-    // console.log(drinkDiv)
     drinkDiv.classList.add('drinkDiv')
     section.append(drinkDiv)
 
     const drinkName = document.createElement('h3')
     drinkName.textContent = `${data[i].strDrink}`
-    // console.log(data[i].strDrink)
     drinkDiv.append(drinkName)
 
     const drinksImg = document.createElement('img')
     drinksImg.classList.add('drinksImg')
     drinksImg.setAttribute('src', data[i].strDrinkThumb)
-    // < img; src = `${data.strDrinkThumb}`;style ="height: 250px; width: auto">
-    // console.log(data[i].strDrinkThumb)
     drinksImg.classList.add('drinksImg')
     drinkDiv.append(drinksImg)
 
     const inst = document.createElement('h4')
     inst.textContent = `${data[i].strInstructions}`
     console.log(data[i].strInstructions)
-    // inst.classList.add('inst')
     drinkDiv.append(inst)
 
-    // Create empty array for measurments 
-    // Create empty array for ingredients
+
       let measurments = []
       let ingredients = []
 
-      //Push measurments into the measurments array with a for in loop - inside of loop use control flor - if statment make sure it has.includes() str
       for (let measurment in data[i]) {
         if (measurment.includes("strMeasure") && data[i][measurment] != null) {
           measurments.push(data[i][measurment])
@@ -117,34 +104,8 @@ function showDrinkData(data) {
       ing.textContent = `${ingredients[i]}: ${measurments[i]}`
       drinkDiv.append(ing)
     }
-    // console.log(ingredients)
-    // console.log(measurments)
   }
-
 }
-  
-
-//   button.addEventListener('click', () => {
-//     // const inputValue = document.querySelector('#blank').value
-//     let data = document.querySelector('#blank').value
-//     console.log(data)
-    
-//     fetchData(data)
-//     // alcData(data)
-//     removeDrink()
-//     return data
-//   })
-
-
-// button2.addEventListener('click', () => {
-//     // e.preventDefault()
-//     // const inputValue = document.querySelector('#blank').value
-//     let data = document.querySelector('#blank2').value
-//     console.log(data)
-//     alcData(data)
-//     removeDrink()
-//     return data
-//   })
 
 
 
@@ -152,13 +113,8 @@ const form = document.querySelector('.drink-data')
 form.addEventListener("submit", (e) => {
   e.preventDefault()
   const data = document.querySelector('#blank').value
-  // const data2 = document.querySelector('#blank2').value
-
   document.querySelector('#blank').value = ""
   fetchData(data)
-
-  // document.querySelector('#blank2').value = ""
-  // alcData(data2)
 
   removeDrink()
 })
@@ -179,7 +135,7 @@ function removeDrink() {
   }
 }
 
-
+// Got this from W3 Schools
 window.onscroll = function () { scrollFunction() }
 function scrollFunction() {
   if (document.body.scrollTop > 100 ||
