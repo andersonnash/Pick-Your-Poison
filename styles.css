@@ -143,14 +143,15 @@ h3{
 }
 
 img.logo{
-  display: flex;
-  justify-content: flex-end;
-  margin: auto;
+  /* display: flex; */
+  /* justify-content: flex-end; */
+  /* justify-content: center; */
+  /* margin: auto; */
   max-width: 35px;
   min-width: 35px;
   max-height: auto;
   color: #2b6777;
-  float: right;
+  /* float: right; */
 }
 
 footer{
@@ -298,6 +299,15 @@ p {
   h1,
   h2{
     font-size: 30px;
+  }
+
+  form.drink-data{
+    display: flex;
+    flex-direction: column;
+  }
+  form.alc-data{
+    display: flex;
+    flex-direction: column;
   }
 }
 
