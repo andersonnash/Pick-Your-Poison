@@ -102,11 +102,11 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|June 21| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|June 22| Project Approval / Core Application Structure (HTML, CSS, etc.) | Incomplete
-|June 23| Pseudocode / actual code | Incomplete
-|June 24|MPV Initial Clickable Model  | Incomplete
-|June 25| Advanced Styling PVMP| Incomplete
+|June 21| Prompt / Wireframes / Priority Matrix / Timeframes | complete
+|June 22| Project Approval / Core Application Structure (HTML, CSS, etc.) | complete
+|June 23| Pseudocode / actual code | complete
+|June 24|MPV Initial Clickable Model  | complete
+|June 25| Advanced Styling PVMP| complete
 |June 28| Presentations | Incomplete
 
 ## Priority Matrix
@@ -118,30 +118,53 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Working with API | H | 6hrs|  |  |
-| Create Click Event to Render Data  | H | 3hrs |   |   |
-| Create Dynamic HTML | H | 3hrs|  |  |
-| Create CSS | H | 3hrs|  |  |
-| Appending Drink Data | H | 3hrs|  |  |
-| Appending Drink Image | H | 1hrs|  |  |
-| Formatting Images| H | 3hrs|  | |
-| Flex Box Styling | H | 2hrs|  |  |
-| Flex Box for search results| H | 2hrs|  | |
-| Advanced CSS| H | 3hrs|  | |
-| Remove Search When New Search is Initialized| H | 3hrs|  | |
-| Media Query| H | 2hrs|  | |
-| Adding Links to Header PVMP| H | 3hrs|  | |
-| Total | H | 30hrs|  |  |
+| Working with API | H | 6hrs| 6hrs | 6hrs |
+| Create Click Event to Render Data  | H | 3hrs |  1hr | 1hrs  |
+| Create Dynamic HTML | H | 3hrs| 3hrs | 3hrs |
+| Create CSS | H | 3hrs| 4hrs | 4hrs |
+| Appending Drink Data | H | 3hrs| 2hrs | 2hrs |
+| Appending Drink Image | H | 1hrs| 1hrs | 1hrs |
+| Formatting Images| H | 3hrs| 1.5hrs | 1.5hrs|
+| Flex Box Styling | H | 2hrs| 3hrs | 3hrs |
+| Flex Box for search results| H | 2hrs| 2hrs | 2hrs|
+| Advanced CSS| H | 3hrs| 6hrs | 6hrs|
+| Remove Search When New Search is Initialized| H | 3hrs| 2hrs |2hrs |
+| Media Query| H | 2hrs| 1.5hrs | 1.5hrs|
+| Getting rid of Null| H | 3hrs| 6hrs | 6hrs|
+| Adding GitHub Logo and Link| H | 1hr| 1hrs |2hrs |
+| Total | H | 30hrs|  | 40hrs |
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
+```// This is the code that will remove null values
 
-```
-function reverse(string) {
-	// here is the code to reverse a string of text
+    // Create empty array for measurments 
+    // Create empty array for ingredients
+      let measurments = []
+      let ingredients = []
+
+      //Push measurments into the measurments array with a for in loop - 
+      for (let measurment in data[i]) {
+        if (measurment.includes("strMeasure") && data[i][measurment] != null) {
+          measurments.push(data[i][measurment])
+        }
+      }
+
+    for (let ingredient in data[i]) {
+      console.log(data[i][ingredient])
+        if (ingredient.includes('strIngredient') &&  data[i][ingredient] != null) {
+          ingredients.push(data[i][ingredient])  
+      }
+    }
+    for (let i = 0; i < ingredients.length; i++){
+      const ing = document.createElement('p')
+      ing.textContent = `${ingredients[i]}: ${measurments[i]}`
+      drinkDiv.append(ing)
+    }
+  }
+
 }
 ```
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
+I have a bunch of PVMPs that I couldnt get done because adding another function to the site took longer than expected. 
