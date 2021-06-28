@@ -102,11 +102,11 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|June 21| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|June 22| Project Approval / Core Application Structure (HTML, CSS, etc.) | Incomplete
-|June 23| Pseudocode / actual code | Incomplete
-|June 24|MPV Initial Clickable Model  | Incomplete
-|June 25| Advanced Styling PVMP| Incomplete
+|June 21| Prompt / Wireframes / Priority Matrix / Timeframes | complete
+|June 22| Project Approval / Core Application Structure (HTML, CSS, etc.) | complete
+|June 23| Pseudocode / actual code | complete
+|June 24|MPV Initial Clickable Model  | complete
+|June 25| Advanced Styling PVMP| complete
 |June 28| Presentations | Incomplete
 
 ## Priority Matrix
